@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+    - .:/var/www/html:delegated
+    env_file:
+    - tfc/.env
+    ports:
+    - 80:80
